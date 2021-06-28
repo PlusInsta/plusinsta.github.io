@@ -1,0 +1,134 @@
+/* wrapper stuff */
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  position: relative;
+}
+
+.main {
+  display: flex;
+  position: relative;
+  max-width: 100%;
+  z-index: 1;
+}
+
+.inner {
+  padding: 2rem 3rem;
+  max-width: 100%;
+  width: 44rem;
+  z-index: 1;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+.header {
+  font-weight: normal;
+  font-family: "Righteous", "Century Gothic", "Franklin Gothic Medium", "Britannic", "Helvetica Neue", "Helvetica", sans-serif;
+}
+.text {
+  font-family: 'Poppins', 'Roboto', '-apple-system', 'Helvetica Neue', 'system-ui', 'Arial', 'Helvetica', sans-serif;
+}
+
+#intro-header {
+  font-family: "PixelPetit", monospace, sans-serif;
+  font-size: 48px;
+  font-smooth: never;
+  -webkit-font-smoothing : none; }
+#intro-header span {
+  font-size: 32px;
+  background-color: #802060;
+  color: white;
+  padding: 8px 16px;
+}
+
+.header {
+  font-family: "PixelPetit", monospace, sans-serif;
+  font-smooth: never;
+  -webkit-font-smoothing : none;
+}
+h2 {
+  font-size: 32px;
+}
+h3 {
+  font-size: 16px;
+}
+
+body {
+  background-color: #F0F0F0;
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  word-wrap: break-word;
+  overflow-x: hidden;
+  display: block;
+}
+
+
+img.avatar {
+  width: 16rem;
+  height: 16rem;
+  border-radius: 10%;
+}
+img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.separator {
+  display: block;
+  height: 5px;
+  border: 0;
+  border-top: 2px solid #000;
+  opacity: 0.5;
+}
+#intro-separator {
+  border-top: 4px solid #802060;
+  margin-top: -25px;
+  margin-bottom: 20px;
+}
+h2.header + .separator {
+  margin-top: -24px;
+}
+h3.header + .separator {
+  margin-top: -16px;
+  border-top: 1px solid #000;
+}
+
+#links-header + .separator {
+  border-left: 128px solid #802060;
+}
+
+#discord-plus-header + .separator {
+  border-left: 256px solid #802060;
+}
+
+.note {
+  font-family: "Poppins", -apple-system, "Helvetica Neue", system-ui, "Tahoma", "Segoe UI", "Helvetica", sans-serif !important;
+  opacity: 0.75;
+  font-size: 0.9rem;
+}
+
+a .icon {
+  height: 32px;
+  width: 32px;
+  border-radius: 0;
+}
+
+[href^="https://imgur.com/"] .icon {
+  border-radius: 50%;
+}
+
+.icons {
+  list-style: none;
+  padding-inline-start: 0;
+}
+
+.icons li {
+    display: inline-block;
+    margin-right: 10px;
+}
