@@ -4,6 +4,79 @@
   src: url("assets/fonts/PixelPetit.ttf")
 }
 
+/* text */
+.text {
+  font-family: 'Poppins', 'Roboto', '-apple-system', 'Helvetica Neue', 'system-ui', 'Arial', 'Helvetica', sans-serif;
+}
+a { color: inherit; }
+
+/* animations */
+@keyframes bobbing {
+0% 		{ margin-top: 0; }
+25% 	{ margin-top: 1px; }
+50% 	{ margin-top: 0; }
+75% 	{ margin-top: -1px; }
+100% 	{ margin-top: 0; }
+}
+
+@keyframes blink {
+0% {opacity:1}
+49% {opacity:1}
+50% {opacity:0}
+100%{opacity:0}
+}
+/* some fun font styles */
+.note {
+  font-family: "Poppins", -apple-system, "Helvetica Neue", system-ui, "Tahoma", "Segoe UI", "Helvetica", sans-serif;
+  opacity: 0.75;
+  font-size: 0.9rem;
+}
+
+.DEATH {
+	font-family: serif;
+	font-size: 1.2rem;
+	color: #666;
+	opacity: 80%;
+	font-weight: 600;
+}
+
+.serious {
+	font-family: "Roboto", -apple-system, system-ui, "Verdana", "Segoe UI", "Helvetica", sans-serif;
+}
+.serious a {color: #be2222; text-decoration: none;}
+
+.lighthearted {
+	color: #a01050
+}
+
+.lying {
+  font-family: "PixelPetit", monospace, sans-serif;
+  font-size: 24px;
+}
+
+.blink {
+  animation: blink 2s infinite 0s;
+}
+
+.lie {
+  display: inline-flex;
+  margin-bottom: 50px;
+  position: absolute;
+  margin-left: 0.5rem;
+}
+
+.lie1 { animation: bobbing 1.2s infinite -1s; }
+.lie2 { animation: bobbing 1.2s infinite -0.8s; }
+.lie3 { animation: bobbing 1.2s infinite -0.6s; }
+.lie4 { animation: bobbing 1.2s infinite -0.4s; }
+.lie5 { animation: bobbing 1.2s infinite -0.2s; }
+.lie6 { animation: bobbing 1.2s infinite 0s; }
+
+.emphasis {
+  animation: bobbing 3s infinite;
+}
+
+
 /* wrapper stuff */
 .wrapper {
   display: flex;
@@ -32,12 +105,12 @@
     box-sizing: border-box;
 }
 
+/* page intro */
 .header {
   font-weight: normal;
-  font-family: "Righteous", "Century Gothic", "Franklin Gothic Medium", "Britannic", "Helvetica Neue", "Helvetica", sans-serif;
-}
-.text {
-  font-family: 'Poppins', 'Roboto', '-apple-system', 'Helvetica Neue', 'system-ui', 'Arial', 'Helvetica', sans-serif;
+  font-family: "PixelPetit", monospace, sans-serif;
+  font-smooth: never;
+  -webkit-font-smoothing : none;
 }
 
 #intro-header {
@@ -45,18 +118,21 @@
   font-size: 48px;
   font-smooth: never;
   -webkit-font-smoothing : none; }
-#intro-header span {
+#intro-header span.pronouns {
   font-size: 32px;
   background-color: #802060;
   color: white;
   padding: 8px 16px;
 }
-
-.header {
-  font-family: "PixelPetit", monospace, sans-serif;
-  font-smooth: never;
-  -webkit-font-smoothing : none;
+#intro-header span.flag {
+  font-size: 32px;
+  background-image: url('assets/images/bipride.svg');
+  background-size: cover;
+  color: white;
+  padding: 8px 8px 8px 16px;
 }
+
+
 h2 {
   font-size: 32px;
 }
@@ -74,6 +150,7 @@ body {
   display: block;
 }
 
+/* images */
 
 img.avatar {
   width: 16rem;
@@ -84,6 +161,8 @@ img {
   max-width: 100%;
   border-radius: 10px;
 }
+
+/* separators */
 
 .separator {
   display: block;
@@ -113,11 +192,7 @@ h3.header + .separator {
   border-left: 256px solid #802060;
 }
 
-.note {
-  font-family: "Poppins", -apple-system, "Helvetica Neue", system-ui, "Tahoma", "Segoe UI", "Helvetica", sans-serif !important;
-  opacity: 0.75;
-  font-size: 0.9rem;
-}
+/* icon code */
 
 a .icon {
   height: 32px;
