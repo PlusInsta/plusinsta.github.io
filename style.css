@@ -118,6 +118,9 @@ a { color: inherit; }
   font-size: 48px;
   font-smooth: never;
   -webkit-font-smoothing : none; }
+#intro-header .tags {
+	display: inline-block;
+}
 #intro-header span.pronouns {
   font-size: 32px;
   background-color: #802060;
