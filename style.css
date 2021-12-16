@@ -1,14 +1,51 @@
-/* my custom font */
-@font-face {
-  font-family: PixelPetit;
-  src: url("assets/fonts/PixelPetit.ttf")
+:root {
+	--accent-faded: #001536;
+	--accent: #003282;
+	--fun: #FF77FF;
+	--DARKNESS: #d6d6d6;
+	--blood: red;
 }
 
-/* text */
-.text {
-  font-family: 'Poppins', 'Roboto', '-apple-system', 'Helvetica Neue', 'system-ui', 'Arial', 'Helvetica', sans-serif;
+/* wrapper stuff */
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 0;
+  position: relative;
+  background-image: url('assets/images/bg.gif');
+    image-rendering: optimizeSpeed;
+    image-rendering: -moz-crisp-edges;
+	image-rendering: -o-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: pixelated;
+    image-rendering: optimize-contrast;
+    -ms-interpolation-mode: nearest-neighbor;
 }
-a { color: inherit; }
+
+.main {
+  display: flex;
+  position: relative;
+  max-width: 100%;
+  z-index: 1;
+  background-color: hsla(0,0%,0%,0.75)
+}
+
+.inner {
+  padding: 2rem 3rem;
+  max-width: 100%;
+  width: 44rem;
+  z-index: 1;
+}
+
+.gamebox {
+	margin: 4px;
+	padding: 16px;
+	border: 2px solid var(--DARKNESS);
+	display: inline-block;
+	width: 256px;
+}
 
 /* animations */
 @keyframes bobbing {
@@ -25,6 +62,21 @@ a { color: inherit; }
 50% {opacity:0}
 100%{opacity:0}
 }
+
+/* text */
+.text {
+  font-family: 'Poppins', 'Roboto', '-apple-system', 'Helvetica Neue', 'system-ui', 'Arial', 'Helvetica', sans-serif;
+  color: white;
+  z-index: 1;
+}
+a { color: inherit; }
+
+/* my custom font */
+@font-face {
+  font-family: PixelPetit;
+  src: url("assets/fonts/PixelPetit.ttf")
+}
+
 /* some fun font styles */
 .note {
   font-family: "Poppins", -apple-system, "Helvetica Neue", system-ui, "Tahoma", "Segoe UI", "Helvetica", sans-serif;
@@ -35,7 +87,7 @@ a { color: inherit; }
 .DEATH {
 	font-family: serif;
 	font-size: 1.2rem;
-	color: #666;
+	color: var(--DARKNESS);
 	opacity: 80%;
 	font-weight: 600;
 }
@@ -46,10 +98,10 @@ a { color: inherit; }
 .serious a {color: #be2222; text-decoration: none;}
 
 .lighthearted {
-	color: #a01050
+	color: var(--fun);
 }
 
-.lying {
+.love {
   font-family: "PixelPetit", monospace, sans-serif;
   font-size: 24px;
 }
@@ -58,47 +110,22 @@ a { color: inherit; }
   animation: blink 2s infinite 0s;
 }
 
-.lie {
+.luv {
   display: inline-flex;
   margin-bottom: 50px;
   position: absolute;
   margin-left: 0.5rem;
 }
 
-.lie1 { animation: bobbing 1.2s infinite -1s; }
-.lie2 { animation: bobbing 1.2s infinite -0.8s; }
-.lie3 { animation: bobbing 1.2s infinite -0.6s; }
-.lie4 { animation: bobbing 1.2s infinite -0.4s; }
-.lie5 { animation: bobbing 1.2s infinite -0.2s; }
-.lie6 { animation: bobbing 1.2s infinite 0s; }
+.luv1 { animation: bobbing 1.2s infinite -1s; }
+.luv2 { animation: bobbing 1.2s infinite -0.8s; }
+.luv3 { animation: bobbing 1.2s infinite -0.6s; }
+.luv4 { animation: bobbing 1.2s infinite -0.4s; }
+.luv5 { animation: bobbing 1.2s infinite -0.2s; }
+.luv6 { animation: bobbing 1.2s infinite 0s; }
 
 .emphasis {
   animation: bobbing 3s infinite;
-}
-
-
-/* wrapper stuff */
-.wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  z-index: 2;
-  position: relative;
-}
-
-.main {
-  display: flex;
-  position: relative;
-  max-width: 100%;
-  z-index: 1;
-}
-
-.inner {
-  padding: 2rem 3rem;
-  max-width: 100%;
-  width: 44rem;
-  z-index: 1;
 }
 
 *, *:before, *:after {
@@ -123,10 +150,9 @@ a { color: inherit; }
 }
 #intro-header span.pronouns {
   font-size: 32px;
-  background-color: #802060;
+  background-color: var(--accent);
   color: white;
   padding: 8px 16px;
-  display: none;
 }
 #intro-header span.flag {
   font-size: 32px;
@@ -136,6 +162,11 @@ a { color: inherit; }
   padding: 8px 8px 8px 16px;
 }
 
+#fullbody-avatar {
+	height: 100%;
+	margin-bottom: -200px;
+	-webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 1) 65%);
+}
 
 h2 {
   font-size: 32px;
@@ -152,6 +183,10 @@ body {
   word-wrap: break-word;
   overflow-x: hidden;
   display: block;
+}
+
+.index {
+  display: none; /* i want to implement this better lol */
 }
 
 /* images */
@@ -172,11 +207,11 @@ img {
   display: block;
   height: 5px;
   border: 0;
-  border-top: 2px solid #000;
+  border-top: 2px solid #fff;
   opacity: 0.5;
 }
 #intro-separator {
-  border-top: 4px solid #802060;
+  border-top: 4px solid var(--accent);
   margin-top: -25px;
   margin-bottom: 20px;
 }
@@ -188,12 +223,16 @@ h3.header + .separator {
   border-top: 1px solid #000;
 }
 
+h2.header#health-header + .separator {
+	display: none;
+}
+
 #links-header + .separator {
-  border-left: 128px solid #802060;
+  border-left: 128px solid #fff;
 }
 
 #discord-plus-header + .separator {
-  border-left: 256px solid #802060;
+  border-left: 256px solid #fff;
 }
 
 /* icon code */
@@ -214,6 +253,7 @@ a .icon {
 }
 
 .icons li {
-    display: inline-block;
-    margin-right: 10px;
+  display: inline-block;
+  margin-right: 10px;
+  border-radius: 50%;
 }
