@@ -185,8 +185,8 @@ body {
   display: block;
 }
 
-.index {
-  display: none; /* i want to implement this better lol */
+.disabled {
+  display: none;
 }
 
 /* images */
