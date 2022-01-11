@@ -45,6 +45,7 @@
 	border: 2px solid var(--DARKNESS);
 	display: inline-block;
 	width: 256px;
+	font-family: "PixelPetit Mono";
 }
 
 /* animations */
@@ -73,8 +74,12 @@ a { color: inherit; }
 
 /* my custom font */
 @font-face {
-  font-family: PixelPetit;
+  font-family: 'PixelPetit';
   src: url("assets/fonts/PixelPetit.ttf")
+}
+@font-face {
+  font-family: 'PixelPetit Mono';
+  src: url("assets/fonts/PixelPetitClassic.ttf")
 }
 
 /* some fun font styles */
@@ -102,7 +107,7 @@ a { color: inherit; }
 }
 
 .love {
-  font-family: "PixelPetit", monospace, sans-serif;
+  font-family: "PixelPetit Mono", monospace, sans-serif;
   font-size: 24px;
 }
 
@@ -139,27 +144,50 @@ a { color: inherit; }
   font-smooth: never;
   -webkit-font-smoothing : none;
 }
-
+h2.header {
+  margin-bottom: 16px;
+}
 #intro-header {
   font-family: "PixelPetit", monospace, sans-serif;
-  font-size: 48px;
-  font-smooth: never;
-  -webkit-font-smoothing : none; }
-#intro-header .tags {
-	display: inline-block;
-}
-#intro-header span.pronouns {
   font-size: 32px;
-  background-color: var(--accent);
+  font-smooth: never;
+  -webkit-font-smoothing : none;
+  margin-bottom: 17px;
+}
+.tags {
+  font-weight: normal;
+  font-family: "PixelPetit", monospace, sans-serif;
+  font-size: 16px;
+  font-smooth: never;
+  -webkit-font-smoothing : none;
   color: white;
+  display: block;
+  text-align: right;
+  margin-top: -16px;
+}
+.tags .pronouns {
+  background-color: var(--accent);
   padding: 8px 16px;
 }
-#intro-header span.flag {
-  font-size: 32px;
-  background-image: url('assets/images/bipride.svg');
+.tags .flag {
   background-size: cover;
-  color: white;
-  padding: 8px 8px 8px 16px;
+}
+.tags .flag.pride.bi {
+  background-image: url('assets/images/bipride.svg');
+  padding: 8px 16px;
+}
+.tags .flag.country {
+  color: transparent;
+}
+.flag.country.brazil {
+  aspect-ratio: 10 / 7;
+  padding: 8px 11px;
+  background-image: url('assets/images/Flag_of_Brazil.svg');
+}
+.flag.country.norway {
+  aspect-ratio: 128 / 93;
+  padding: 8px 10px;
+  background-image: url('assets/images/Flag_of_Norway.svg');
 }
 
 #fullbody-avatar {
