@@ -246,10 +246,6 @@ body {
   display: block;
 }
 
-.disabled {
-  display: none !important;
-  color: transparent !important;
-}
 .invisible {
 	opacity: 0 !important;
 }
